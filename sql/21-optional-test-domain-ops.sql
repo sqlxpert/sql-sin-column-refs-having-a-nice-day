@@ -9,6 +9,11 @@
 
 
 
+\connect us_ca_pop
+set search_path to us_ca_pop;
+
+
+
 select
    test_number
   ,test_name

@@ -9,7 +9,12 @@
 
 
 
-select 'see github.com/sqlxpert/sql-sin-column-refs-having-a-nice-day';
+\connect us_ca_pop
+set search_path to us_ca_pop;
+
+
+
+select 'github.com/sqlxpert/sql-sin-column-refs-having-a-nice-day';
 
 
 
