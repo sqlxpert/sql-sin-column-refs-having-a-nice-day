@@ -1,11 +1,10 @@
-# HAVING a nice day? SQL, arbitrariness, and extra work
+# HAVING a nice day? SQL, arbitrary syntax, and extra work
 
 Source code to accompany my October&nbsp;22,&nbsp;2026 article
 (
-[LinkedIn](https://linkedin.com/) |
-[blog](https://sqlxpert.github.io/)
-),
-"HAVING a nice day? SQL, arbitrariness, and extra work",
+[LinkedIn](https://www.linkedin.com/pulse/having-nice-day-sql-arbitrary-syntax-extra-work-paul-marcelin-4lqhc) |
+[blog](https://sqlxpert.github.io/2026/10/22/having-a-nice-day-sql-arbitrary-syntax.html)
+)
 about problems with column references in the SQL `select` statement
 
 ## Licenses
