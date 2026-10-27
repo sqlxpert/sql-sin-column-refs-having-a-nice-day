@@ -9,10 +9,6 @@
 
 
 
-\dox+ * county|city city|county;
-
-
-
 select
    test_number
   ,test_name
@@ -46,3 +42,7 @@ from
 order by
    test_number
 ;
+
+
+
+\dox+ * county|city city|county;
