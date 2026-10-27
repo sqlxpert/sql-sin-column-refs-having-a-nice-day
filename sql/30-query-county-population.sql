@@ -4,13 +4,8 @@
 
 
 
--- Queries to find counties with population 1 million+
--- Tested with PostgreSQL 18 psql
-
-
-
-\connect us_ca_pop
-set search_path to us_ca_pop;
+-- find counties with population 1 million+
+-- postgresql 18, mysql 8.4 (mariadb 11.4)
 
 
 
@@ -29,7 +24,7 @@ group by
    county
 having
   population_total >= 1000000
-  -- the trick question: is population_total allowed here?
+  -- trick question: is population_total allowed here?
 order by
    population_total
 ;
@@ -66,7 +61,7 @@ order by
 ------------------------------------------------------------------------------
 select 'california counties with population 1 million+ (view)';
 
-create or replace temporary view county_population as
+create or replace view county_population as
   select
      county
     ,sum(population) as population_total
@@ -138,7 +133,7 @@ select
   ,county              as county2
   ,avg(population)     -- meaningless; gets arbitrary column name
   ,sum(length(county)) -- meaningless; gets arbitrary column name
-  ,sum(population)     -- gets duplicate arbitrary column name
+  ,sum(population)     -- gets duplicate arbitrary column name in postgresql 18
   ,sum(population)     as population_total
   ,count(city)         as cities
 from
@@ -148,7 +143,7 @@ group by
    -- column name:
    county
 
-   -- postgresql 18 permits column alias:
+   -- postgresql 18, mysql 8.4 permit column alias:
    -- county2
 
 having
@@ -156,14 +151,14 @@ having
   -- (error: ... "population_total" does not exist):
   -- population_total >= 1000000
 
-  -- must repeat arbitrary expression from select list:
+  -- must repeat expression from select list in postgresql 18:
   sum(population) >= 1000000
 
 order by
    -- numbered column (column order from select list):
-   6  
+   -- 6  
 
-   -- postgresql 18 permits column alias:
+   -- postgresql 18, mysql 8.4 permit column alias:
    -- population_total
 
    -- postgresql 18 permits referencing the arbitrary column name:
@@ -172,4 +167,7 @@ order by
    -- no way to distinguish duplicate arbitrary column names
    -- (error: ... "sum" is ambiguous):
    -- sum
+
+   -- mysql 8.4 permits referencing the arbitrary column name:
+   -- "avg(population)"
 ;

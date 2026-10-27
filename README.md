@@ -7,6 +7,32 @@ Source code to accompany my October&nbsp;22,&nbsp;2026 article
 )
 about problems with column references in the SQL `select` statement
 
+## SQL formatting
+
+### Current or potential comma-separated lists
+
+- Examples: `select`&nbsp;: `from`&nbsp;, `group by`&nbsp;, `order by`
+- 1&nbsp;item per line; indent 1&nbsp;extra space for comma
+- Conspicuous **leading comma** prevents syntax errors when items are added
+
+### Boolean expressions
+
+- Examples: `select`&nbsp;: `where`&nbsp;, `having`
+- No extra indentation unless and until logical operators (`not`, `or`, `and`)
+  are added
+- Then, use line breaks, indentation, and parentheses so that the expression
+  can be read naturally and parallel parts of the expression can easily be
+  recognized
+
+### Operators and keywords
+
+- Always align or space out pairs based on _longer_ item
+
+  ```sql
+    =  >    asc   true
+   !=  >=  desc  false
+  ```
+
 ## Licenses
 
 |Scope|Link|Included Copy|
