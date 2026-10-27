@@ -141,10 +141,10 @@ from
 
 group by
    -- column name:
-   county
+   -- county
 
    -- postgresql 18, mysql 8.4 permit column alias:
-   -- county2
+   county2
 
 having
   -- postgresql 18 does not permit column alias
@@ -156,7 +156,7 @@ having
 
 order by
    -- numbered column (column order from select list):
-   -- 6  
+   6
 
    -- postgresql 18, mysql 8.4 permit column alias:
    -- population_total
