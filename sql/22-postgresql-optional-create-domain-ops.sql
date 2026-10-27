@@ -4,13 +4,8 @@
 
 
 
--- Optional: Create custom comparison operators for county, city domains
--- Tested with PostgreSQL 18 psql
-
-
-
-\connect us_ca_pop
-set search_path to us_ca_pop;
+-- optional: create custom comparison operators for county, city domains
+-- postgresql 18
 
 
 
