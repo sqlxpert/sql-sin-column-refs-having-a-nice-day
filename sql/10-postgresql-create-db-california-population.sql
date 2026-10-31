@@ -9,8 +9,9 @@
 
 
 
-drop database if exists us_ca_pop;
+\connect postgres
 
+drop database if exists us_ca_pop;
 create database us_ca_pop
   template        'template0'
   encoding        'UTF8'
