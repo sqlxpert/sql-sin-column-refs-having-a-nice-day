@@ -65,36 +65,36 @@ create or replace function county_city_equal_never (city, county)
 
 
 
-create operator != (
-  commutator =  !=,
-  leftarg    = county,
-  rightarg   = city,
-  function   = county_city_not_equal_always
+create operator  != (
+   commutator =  !=
+  ,leftarg    = county
+  ,rightarg   = city
+  ,function   = county_city_not_equal_always
 );
 
-create operator  = (
-  commutator =   =,
-  leftarg    = county,
-  rightarg   = city,
-  function   = county_city_equal_never,
+create operator   = (
+   commutator =   =
+  ,leftarg    = county
+  ,rightarg   = city
+  ,function   = county_city_equal_never
 
-  negator    = !=
+  ,negator    = !=
 );
 
 
 
-create operator != (
-  commutator =  !=,
-  leftarg    = city,
-  rightarg   = county,
-  function   = county_city_not_equal_always
+create operator  != (
+   commutator =  !=
+  ,leftarg    = city
+  ,rightarg   = county
+  ,function   = county_city_not_equal_always
 );
 
-create operator  = (
-  commutator =   =,
-  leftarg    = city,
-  rightarg   = county,
-  function   = county_city_equal_never,
+create operator   = (
+   commutator =   =
+  ,leftarg    = city
+  ,rightarg   = county
+  ,function   = county_city_equal_never
 
-  negator    = !=
+  ,negator    = !=
 );
