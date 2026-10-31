@@ -9,6 +9,9 @@ about problems with column references in the SQL `select` statement
 
 ## SQL formatting
 
+<details>
+  <summary>SQL formatting conventions</summary>
+
 ### Current or potential comma-separated lists
 
 - Examples: `select`&nbsp;: `from`&nbsp;, `group by`&nbsp;, `order by`
@@ -32,6 +35,8 @@ about problems with column references in the SQL `select` statement
     =  >    asc   true
    !=  >=  desc  false
   ```
+
+</details>
 
 ## Licenses
 
