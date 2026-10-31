@@ -38,8 +38,8 @@ create domain place as text
   constraint place_space_trimmed  check (value = trim(both from value))
   constraint place_lowercase      check (value = lower(value))
 ;
-comment on domain county is 'california place name';
-comment on constraint place_not_null on domain county is
+comment on domain place is 'california place name';
+comment on constraint place_not_null on domain place is
   'also need column constraint in table; see postgresql domain documentation'
 ;
 
